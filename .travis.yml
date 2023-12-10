@@ -1,6 +1,6 @@
 #Everytime we use docker we use it using super user
 sudo: required
-
+language: generic
 #Services to install
 services:
   - docker
@@ -24,8 +24,8 @@ deploy:
   app: "my-docker-app" #elasticbeanstalk application name
   env: "EB-env"
   bucket_name: "elasticbeanstalk-us-west-2-428846500808"
-  bucket_path: "docker/"
+  bucket_path: "docker"
   on:
     branch: main
-  access_key_id: $AWS_ACCESS_KEY_ID 
-  secret_access_key: $AWS_SECRET_ACCESS_KEY
+  # access_key_id: $AWS_ACCESS_KEY_ID 
+  # secret_access_key: $AWS_SECRET_ACCESS_KEY
