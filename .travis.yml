@@ -13,3 +13,16 @@ before_install:
 script:
   #Adding -e CI=true to exit after running the test suite
   - docker run -e CI=true docker-react-img npm run test 
+
+deploy:
+# Deploy our application to ElasticBeanstalk application on aws
+  provider: elasticbeanstalk #for identifying our cloud provider and the elasticbeanstalk app
+  region: "us-west-2"
+  app: "my-docker-app" #elasticbeanstalk application name
+  env: "EB-env"
+  bucket_name: "docker-run-bucket-amir"
+  bucket_path: "docker/"
+  on:
+    branch: main
+  access_key_id: $AWS_Access_key 
+  secret_access_key: $AWS_Secret_Access_Key
