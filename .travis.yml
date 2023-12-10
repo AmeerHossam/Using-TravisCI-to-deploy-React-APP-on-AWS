@@ -24,7 +24,7 @@ deploy:
   app: "my-docker-app" #elasticbeanstalk application name
   env: "EB-env"
   bucket_name: "elasticbeanstalk-us-west-2-428846500808"
-  bucket_path: "docker"
+  bucket_path: "my-docker-app"
   on:
     branch: main
   # access_key_id: $AWS_ACCESS_KEY_ID 
