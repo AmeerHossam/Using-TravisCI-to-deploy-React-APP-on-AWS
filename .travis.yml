@@ -23,7 +23,7 @@ deploy:
   region: "us-west-2"
   app: "my-docker-app" #elasticbeanstalk application name
   env: "EB-env"
-  bucket_name: "docker-run-bucket-amir"
+  bucket_name: "elasticbeanstalk-us-west-2-428846500808"
   bucket_path: "docker/"
   on:
     branch: main
