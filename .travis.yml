@@ -13,7 +13,7 @@ before_install:
 #Script section contains any commands to run test suite
 script:
   #Adding -e CI=true to exit after running the test suite
-  - docker run -e CI=true docker-react-img npm run test 
+  - docker run -e CI=true sudo1amir/docker-react-img npm run test 
 deploy:
 # Deploy our application to ElasticBeanstalk application on aws
   provider: elasticbeanstalk #for identifying our cloud provider and the elasticbeanstalk app
