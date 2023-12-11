@@ -31,7 +31,7 @@ resource "aws_elastic_beanstalk_application" "docker-app" {
 
 #Create eb environment
 resource "aws_elastic_beanstalk_environment" "eb_env" {
-  name = "EB-env"
+  name = "My-docker-app-env"
   application = aws_elastic_beanstalk_application.docker-app.name
   platform_arn = "arn:aws:elasticbeanstalk:us-west-2::platform/Docker running on 64bit Amazon Linux 2/3.6.4"
   cname_prefix = aws_elastic_beanstalk_application.docker-app.name
