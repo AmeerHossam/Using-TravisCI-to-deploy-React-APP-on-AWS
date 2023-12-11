@@ -7,7 +7,7 @@ services:
 
 #commands to be executed first before any tests are ran 
 before_install:
-  - docker build -t docker-react-img .
+  - docker build -t docker-react-img -f Dockerfile.dev .
   # - curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
   # - unzip awscliv2.zip
   # - sudo ./aws/install
