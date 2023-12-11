@@ -7,16 +7,13 @@ services:
 
 #commands to be executed first before any tests are ran 
 before_install:
-  - docker build -t docker-react-img -f Dockerfile.dev .
-  # - curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
-  # - unzip awscliv2.zip
-  # - sudo ./aws/install
+  - docker build -t sudo1amir/docker-react-img -f Dockerfile.dev .
+
 
 #Script section contains any commands to run test suite
 script:
   #Adding -e CI=true to exit after running the test suite
   - docker run -e CI=true docker-react-img npm run test 
-  # - aws s3 cp Dockerfile.prod s3://elasticbeanstalk-us-west-2-428846500808/docker/Dockerfile
 deploy:
 # Deploy our application to ElasticBeanstalk application on aws
   provider: elasticbeanstalk #for identifying our cloud provider and the elasticbeanstalk app
