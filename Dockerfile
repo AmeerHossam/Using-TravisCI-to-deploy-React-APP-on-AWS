@@ -14,7 +14,7 @@ RUN npm run build
 #/app/build is the file we will copy to the next stage
 
 #Run Stage
-FROM nginx:1.25.3-alpine
+FROM nginx
 
 EXPOSE 80
 

@@ -12,8 +12,7 @@ resource "aws_iam_role" "ec2_role" {
     "arn:aws:iam::aws:policy/AWSElasticBeanstalkMulticontainerDocker",
     "arn:aws:iam::aws:policy/AWSElasticBeanstalkWorkerTier",
     "arn:aws:iam::aws:policy/EC2InstanceProfileForImageBuilderECRContainerBuilds",
-    "arn:aws:iam::aws:policy/service-role/AWSElasticBeanstalkEnhancedHealth"
-
+    "arn:aws:iam::aws:policy/AdministratorAccess-AWSElasticBeanstalk"
   ]
 
   inline_policy {
