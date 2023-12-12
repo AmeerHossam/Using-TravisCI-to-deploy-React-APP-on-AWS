@@ -17,7 +17,7 @@ script:
 deploy:
 # Deploy our application to ElasticBeanstalk application on aws
   provider: elasticbeanstalk #for identifying our cloud provider and the elasticbeanstalk app
-  region: "us-west-1"
+  region: "us-east-1"
   app: "docker" #elasticbeanstalk application name
   env: "docker-env"
   bucket_name: "elasticbeanstalk-us-west-2-428846500808"
