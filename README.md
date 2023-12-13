@@ -20,6 +20,8 @@ $ terraform apply --auto-approve
 
 ```
 ### 'Some Notes'
+- I used multi-stage Containers in the production Dockerfile to follow the best practices in building Dockerfile.
+- Exposing Port must be to Port 80 because we use NGINX in the running stage.
 - AWS ElasticBeanstalk creates S3 bucket to pull the code from there
 - AWS ElasticBeanstalk look to the root path, it builds and runs the docker-compose file there so take care about name it with the default name or maybe you will face in deployment stage like I faced :D
 - Elastic Beanstalk handles the port mapping from the container to the hosting machine.
