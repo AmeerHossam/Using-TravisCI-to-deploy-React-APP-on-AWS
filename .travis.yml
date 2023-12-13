@@ -7,9 +7,8 @@ services:
 
 #commands to be executed first before any tests are ran 
 before_install:
-  # - docker build -t sudo1amir/docker-react-img -f Dockerfile.dev .
-    - docker-compose -f docker-compose-dev.yml up --build
-    - docker-compose -f docker-compose-dev.yml down
+  - docker build -t sudo1amir/docker-react-img -f Dockerfile.dev .
+
 
 #Script section contains any commands to run test suite
 script:
