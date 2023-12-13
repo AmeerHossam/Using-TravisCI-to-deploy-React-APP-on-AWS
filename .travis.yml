@@ -20,8 +20,8 @@ deploy:
   region: "us-east-1"
   app: "docker" #elasticbeanstalk application name
   env: "docker-env"
-  bucket_name: "elasticbeanstalk-us-west-2-428846500808"
-  bucket_path: "my-docker-app"
+  bucket_name: "elasticbeanstalk-us-east-1-428846500808"
+  bucket_path: "docker"
   on:
     branch: main
   access_key_id: "$Access_Key" 
